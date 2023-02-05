@@ -11,21 +11,14 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
+
 @Transactional
-@Slf4j
+
 @Primary
 
-public class EmployeeService {
-    private final EmployeeRepository employeeRepository;
+public interface EmployeeService {
 
-    public Employee saveEmployee(Employee employee) {
-        Employee savedEmployee = employeeRepository.save(employee);
-        return savedEmployee;
-    }
+    public Employee saveEmployee(Employee employee);
 
-    public List<Employee> getEmployees() {
-        List<Employee> employees = employeeRepository.findAll();
-        return employees;
+    public List<Employee> getEmployees() ;
     }
-}
