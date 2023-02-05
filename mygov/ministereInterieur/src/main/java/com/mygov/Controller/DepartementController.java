@@ -2,7 +2,7 @@ package com.mygov.Controller;
 
 import com.mygov.Dto.DepartementDto;
 import com.mygov.Services.DepartementService;
-import com.mygov.Services.EmployeeService;
+import com.mygov.Services.DepartementServiceImp;
 import com.mygov.models.Departement;
 import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;

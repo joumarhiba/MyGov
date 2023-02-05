@@ -1,25 +1,18 @@
 package com.mygov.Services;
 
 import com.mygov.models.Departement;
-import com.mygov.Repository.DepartementRepository;
-import lombok.RequiredArgsConstructor;
+import jakarta.transaction.Transactional;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
+@Transactional
 
-public class DepartementService {
-    private final DepartementRepository departementRepository;
+@Primary
+public interface DepartementService {
 
-    public Departement saveDepartement(Departement departement) {
-        Departement savedDepartement = departementRepository.save(departement);
-        return savedDepartement;
-    }
-
-    public List<Departement> getDepartements() {
-        List<Departement> departements = departementRepository.findAll();
-        return departements;
-    }
+    public Departement saveDepartement(Departement departement);
+    public List<Departement> getDepartements();
 }
