@@ -10,5 +10,5 @@ public class MinistereInterieur {
     public static void main(String[] args) {
         SpringApplication.run(MinistereInterieur.class, args);
     }
-    
+
 }
