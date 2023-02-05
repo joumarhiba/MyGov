@@ -1,10 +1,13 @@
 package com.mygov.Repository;
 
-import com.mygov.DTO.Admin;
+import com.mygov.models.Admin;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 @Repository
+@Transactional(readOnly = true)
 public interface AdminRepository extends JpaRepository<Admin, Long> {
 
         }

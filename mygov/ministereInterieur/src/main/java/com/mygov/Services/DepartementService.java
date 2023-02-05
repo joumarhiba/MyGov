@@ -1,13 +1,9 @@
 package com.mygov.Services;
 
-import com.mygov.DTO.Admin;
-import com.mygov.DTO.Departement;
-import com.mygov.Repository.AdminRepository;
+import com.mygov.models.Departement;
 import com.mygov.Repository.DepartementRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-
-import java.util.concurrent.Delayed;
 
 @Service
 @RequiredArgsConstructor

@@ -1,6 +1,6 @@
 package com.mygov.Controller;
 
-import com.mygov.DTO.Employee;
+import com.mygov.models.Employee;
 import com.mygov.Services.EmployeeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
