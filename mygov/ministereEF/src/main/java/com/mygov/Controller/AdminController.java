@@ -18,11 +18,6 @@ import java.io.IOException;
 
 public class AdminController {
 
-    private final AdminRepository adminRepository;
 
-    @PostMapping("/createDepartement")
-    public ResponseEntity<Object> createDepartement(@RequestBody Admin admin) {
-        Admin response = adminRepository.save(admin);
-        return new ResponseEntity<>(response, HttpStatus.OK);
-    }
+
 }
