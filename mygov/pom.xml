@@ -11,6 +11,7 @@
   <modules>
     <module>ministereEF</module>
     <module>ministereInterieur</module>
+    <module>eureka-server</module>
   </modules>
 
   <name>mygov</name>
@@ -38,6 +39,13 @@
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-dependencies</artifactId>
         <version>${spring.cloud-version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>2022.0.1</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>
