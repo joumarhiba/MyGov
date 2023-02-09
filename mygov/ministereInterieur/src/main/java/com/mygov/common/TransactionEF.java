@@ -1,4 +1,4 @@
-package com.mygov.Dto;
+package com.mygov.common;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,7 +9,7 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class TransactionDto {
+public class TransactionEF {
     private Long id;
     private String nom;
     private String description;
