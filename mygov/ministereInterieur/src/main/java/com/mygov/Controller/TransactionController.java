@@ -22,11 +22,11 @@ public class TransactionController {
     private final TransactionService transactionService;
 
     @PostMapping("/addTransaction")
-    public ResponseEntity<TransactionDto> addEmployee(@RequestBody TransactionDto transactionDto) {
-        Transaction employeeReq = modelMapper.map(transactionDto, Transaction.class);
-        Transaction employee = transactionService.addTransaction(employeeReq);
-        TransactionDto response = modelMapper.map(employee, TransactionDto.class);
-        return new ResponseEntity<TransactionDto>(response, HttpStatus.CREATED);
+    public ResponseEntity<TransactionDto> addTransaction(@RequestBody TransactionDto transactionDto) {
+        Transaction transactionReq = modelMapper.map(transactionDto, Transaction.class);
+        Transaction transaction = transactionService.addTransaction(transactionReq);
+        TransactionDto newtransaction = modelMapper.map(transaction, TransactionDto.class);
+        return new ResponseEntity<TransactionDto>(newtransaction, HttpStatus.CREATED);
     }
 
 }

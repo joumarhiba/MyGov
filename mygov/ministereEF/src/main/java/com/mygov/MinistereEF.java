@@ -8,7 +8,7 @@ import org.springframework.data.elasticsearch.repository.config.EnableElasticsea
 
 @SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
 @EnableDiscoveryClient
-//@EnableElasticsearchRepositories(basePackages = "*")
+//@EnableElasticsearchRepositories
 public class MinistereEF {
     public static void main(String[] args) {
         SpringApplication.run(MinistereEF.class, args);
