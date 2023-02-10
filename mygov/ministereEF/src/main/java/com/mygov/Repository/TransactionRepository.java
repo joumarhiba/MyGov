@@ -7,4 +7,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TransactionRepository extends ElasticsearchRepository<Transaction, String> {
+    Iterable<Transaction> findByMinistere(String ministere);
 }

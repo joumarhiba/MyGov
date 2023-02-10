@@ -27,6 +27,11 @@ public class TransactionServiceImp implements TransactionService{
         return transactionRepository.findAll();
     }
 
+    @Override
+    public Iterable<Transaction> findByMinistere(String ministere) {
+       return transactionRepository.findByMinistere(ministere);
+    }
+
     public String transactionProcessing() {
         //gateway
         return new Random().nextBoolean()?"succeeess":"faiiiiled";

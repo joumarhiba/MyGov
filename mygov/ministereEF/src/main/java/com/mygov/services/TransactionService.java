@@ -10,4 +10,6 @@ public interface TransactionService {
 
     public Transaction addTransaction(Transaction transaction);
     public Iterable<Transaction> getTransaction();
-    }
+
+    Iterable<Transaction> findByMinistere(String ministere);
+}
