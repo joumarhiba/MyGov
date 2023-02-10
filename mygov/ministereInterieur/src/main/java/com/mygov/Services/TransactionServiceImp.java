@@ -36,7 +36,7 @@ public class TransactionServiceImp implements TransactionService {
         transactionEF.setMinistere("Interieur");
 
         TransactionEF transactionEFResponse = restTemplate.postForObject(
-                "http://localhost:8080/api/addTransaction",transactionEF, TransactionEF.class);
+                "http://MINISTEREEF/api/addTransaction",transactionEF, TransactionEF.class);
 
         transactionRepo.save(tr);
         return new TransactionResponse(tr, transactionEFResponse.getSomme(), transactionEFResponse.getMinistere());

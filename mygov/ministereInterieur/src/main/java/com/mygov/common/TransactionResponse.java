@@ -8,7 +8,6 @@ import lombok.RequiredArgsConstructor;
 
 @Data
 @AllArgsConstructor
-@NoArgsConstructor
 @RequiredArgsConstructor
 public class TransactionResponse {
     private Transaction transaction;

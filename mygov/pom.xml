@@ -12,6 +12,7 @@
     <module>ministereEF</module>
     <module>ministereInterieur</module>
     <module>eureka-server</module>
+      <module>gateway</module>
   </modules>
 
   <name>mygov</name>
