@@ -1,6 +1,6 @@
 package com.mygov.Controller;
 
-import com.mygov.Repository.EmployeeRepository;
+
 import com.mygov.models.Employee;
 import com.mygov.services.EmployeeService;
 import lombok.RequiredArgsConstructor;
@@ -13,7 +13,6 @@ import java.util.List;
 @RequestMapping("/api")
 public class EmployeeController {
     private final EmployeeService employeeService;
-    private final EmployeeRepository employeeRepository;
 
     @PostMapping("/saveEmployee")
     public Employee saveEmployee(@RequestBody Employee employee) {
@@ -22,12 +21,12 @@ public class EmployeeController {
 
     @GetMapping("/getEmployees")
     public Iterable<Employee> getEmployees() {
-//        return employeeService.getEmployees();
-        return employeeRepository.findAll();
+       return employeeService.getEmployees();
+
     }
 
-    @DeleteMapping("deleteEmployee")
-    public void deleteEmployee(@RequestBody String id) {
+    @DeleteMapping("deleteEmployee/{id}")
+    public void deleteEmployee(@PathVariable String id) {
         employeeService.deleteEmployee(id);
     }
 }

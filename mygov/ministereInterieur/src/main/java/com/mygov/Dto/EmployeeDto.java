@@ -1,5 +1,6 @@
 package com.mygov.Dto;
 
+import com.mygov.models.Departement;
 import lombok.Data;
 
 @Data
@@ -11,4 +12,5 @@ public class EmployeeDto {
     private String firstname;
 
     private String lastname;
+    private Departement departement;
  }

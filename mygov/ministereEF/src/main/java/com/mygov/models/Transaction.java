@@ -1,9 +1,6 @@
 package com.mygov.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import lombok.Data;
 import org.springframework.data.elasticsearch.annotations.Document;
@@ -13,10 +10,9 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 import java.time.LocalDateTime;
 
 @Document(indexName = "transaction")
-
+@Data
 public class Transaction {
     @Id
-
     private String id;
     @Field(type = FieldType.Text)
     private String nom;
@@ -25,6 +21,7 @@ public class Transaction {
     @Field(type = FieldType.Integer)
     private int somme;
     @Field(type = FieldType.Date)
-    private LocalDateTime date;
+
+    //private LocalDateTime date;
     private String ministere;
 }

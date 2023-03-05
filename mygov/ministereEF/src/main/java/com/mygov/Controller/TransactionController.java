@@ -18,16 +18,16 @@ public class TransactionController {
     private final TransactionService transactionService;
     private final TransactionRepository transactionRepository;
 
+
     @PostMapping("/addTransaction")
-    public ResponseEntity<Transaction> addTransaction(@RequestBody Transaction transaction) {
-        Transaction newTransaction = transactionService.addTransaction(transaction);
-        return new ResponseEntity<Transaction>(newTransaction, HttpStatus.CREATED);
+    public Transaction addTransaction(@RequestBody Transaction transaction) {
+        return transactionService.addTransaction(transaction);
+
     }
 
     @GetMapping("/getTransactions")
     public Iterable<Transaction> getTransactions() {
-       Iterable<Transaction> transactions = transactionService.getTransaction();
-       return transactions;
+       return transactionService.getTransaction();
     }
 
     @GetMapping("/{ministere}")

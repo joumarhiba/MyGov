@@ -28,11 +28,13 @@ public class TransactionServiceImp implements TransactionService {
     @Override
     public TransactionResponse addTransaction(TransactionRequest request) {
         request.setDate(LocalDateTime.now());
+        request.getTransactionInterieur().setDate(LocalDateTime.now());
         Transaction tr = request.getTransactionInterieur();
         TransactionEF transactionEF = request.getTransactionEF();
         transactionEF.setSomme(tr.getSomme());
         transactionEF.setNom(tr.getNom());
         transactionEF.setDescription(tr.getDescription());
+        transactionEF.setDate(tr.getDate());
         transactionEF.setMinistere("Interieur");
 
         TransactionEF transactionEFResponse = restTemplate.postForObject(
